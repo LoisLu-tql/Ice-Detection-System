@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- carousel part -->
+    <section>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/index_bg_1.jpeg' %}" class="car-img d-block w-100" alt="...">
+                    <div class="card carousel-caption d-none d-md-block">
+                        <h1>Welcome to Sea Ice <span class="badge bg-secondary">Detector</span></h1>
+                        <p>Nowadays, sea ice detection problem becomes more and more important with the climate change.
+                            Polar ice detection can also be used to provide accurate sea ice information to ensure the safety of the voyage,
+                            study the Arctic ecological environment, forecast sea ice disasters, and develop marine fisheries.
+                            Artificial intelligence technology continues to develop and has played an indispensable role in many fields.
+                            We use the semantic segmentation technology to predict sea ice in the given pictures.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/index_bg_2.jpeg' %}" class="car-img d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>A Platform that Integrates Multiple Models</h1>
+                        <p>In our website, you can use multiple models we trained to predict sea ice. The models are still updating.
+                            We are also very pleased if you are willing to upload your model.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/index_bg_3.jpeg' %}" class="car-img d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Accurate, Effective and Exoteric</h1>
+                        <p>We aim to build a high-accuracy predicting platform. We are also happy to communicate and study more about sea ice detection.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- card part -->
+    <section class="p-5">
+        <div class="container">
+            <div class="card-group p-2">
+                <div class="card p-2">
+                    <img src="{% static 'img/card_pic_1.png' %}" class="card-img-top p-3" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Based on massive data</h5>
+                        <p class="card-text">
+                            Models are trained by hundreds and thousands of images. Some models are trained by SAR data
+                            while some models are trained by MODIS data. SAR is a type of active data collection where a
+                            sensor produces its own energy and then records the amount of that energy reflected back
+                            after interacting with the Earth. The MODIS Data section contains everything from ATBDs to
+                            Product Descriptions to Product ordering information, including from Direct Broadcast data
+                            providers.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <img src="{% static 'img/card_pic_2.png' %}" class="card-img-top p-2" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Application of semantic segmentation</h5>
+                        <p class="card-text">
+                            Semantic segmentation, or image segmentation, is the task of clustering parts of an image
+                            together which belong to the same object class. It is a form of pixel-level prediction
+                            because each pixel in an image is classified according to a category. The initial semantic
+                            segmentation technology uses the deconvolution layer for up-sampling to classify every pixel
+                            in the picture.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+                <div class="card p-2">
+                    <img src="{% static 'img/card_pic_3.png' %}" class="card-img-top p-2" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">MTV Pattern</h5>
+                        <p class="card-text">The Model provides a definition of how the data formats as coming from the
+                            view so, it stores in the database. The View in this MTV architecture is formatting the data
+                            via the model. In turn, it communicates to the database and that data which transfer to the
+                            template for viewing. Template’s main goal is to keep everything that browser renders.</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- word grid -->
+    <section>
+        <div class="container">
+            <div class="card text-center">
+                <div class="card-header">
+                    Use Our Models
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">We have trained several models for detecting sea ice</h5>
+                    <p class="card-text">
+                        Including UNet, Swin-net, DenseNet
+                        and so on. Choose one of these model and predict.
+                    </p>
+                    <a href="{% url 'app:nets' %}" class="btn btn-primary">Go <i class="bi bi-cursor-fill"></i></a>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+
+            <div class="row pt-5">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Login before using</h5>
+                            <p class="card-text">
+                                Want to explore more about our web?
+                            </p>
+                            <a href="{% url 'app:login' %}" class="btn btn-primary">Go</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Join us</h5>
+                            <p class="card-text">
+                                Want to join us and make contributions to our web?
+                            </p>
+                            <button class="btn btn-primary" type="submit"
+                                    onclick="document.getElementById('highlight').style.visibility='visible';">Go</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact us -->
+    <section class="p-5">
+        <div class="container">
+            <div class="alert alert-primary alert-dismissible fade show" role="alert" id="highlight" style="visibility: hidden">
+              <strong>Contact us!</strong> You could see the ways below.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <h2 class="text-center mb-4">Contact Us</h2>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Email： 190110606@stu.hit.edu.cn</li>
+                <li class="list-group-item">Address：Harbin Institute of Technology, Nanshan District, Shenzhen,
+                    Guangdong Province, China</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="p-5 bg-dark text-white text-center">
+        <div class="container">
+            <p class="lead">Copyright &copy; HITsz ICES Lab</p>
+        </div>
+    </footer>
+{% endblock %}

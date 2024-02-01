@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    SID-Admin
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- add models -->
+    <section class="pt-5">
+        <div class="container pt-5">
+            <form class="row g-3" method="post" action="">
+                {%csrf_token%}
+
+                    <div class="col-md-4">
+                        <label for="netName" class="form-label">Model Name</label>
+                        <input required="required" type="text" class="form-control" id="netName" name="netName">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="netFile" class="form-label">Net File</label>
+                        <input required="required" type="text" class="form-control" id="netFile" name="netFile">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inChannel" class="form-label">Input Channels Num</label>
+                        <input required="required" type="number" class="form-control" id="inChannel" name="inChannel">
+                    </div>
+                    <div class="col-md-2">
+                        <label for="inSize" class="form-label">Input Image Size</label>
+                        <input required="required" type="number" class="form-control" id="inSize" name="inSize">
+                    </div>
+                    <div class="form-floating">
+                      <textarea required="required" class="form-control" placeholder="Leave a comment here" id="netDescription" name="netDescription"style="height: 200px"></textarea>
+                      <label for="netDescription">Model Description Here</label>
+                    </div>
+                <button type="submit" class="btn btn-primary mt-3"><i class="bi bi-box-fill"></i> Submit</button>
+            </form>
+            {% if success %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>Yes!</strong> You have updated the model list.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+
+    <!-- model table and delete -->
+    <section class="pt-5">
+        <div class="container pt-5" style="overflow: scroll; height: 500px;">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Model Name</th>
+                    <th scope="col">Net File</th>
+                  <th scope="col">Input Channels</th>
+                  <th scope="col">Input Image Size</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Operation</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for net in nets_list %}
+                    <tr>
+                      <td>{{ net.net_name }}</td>
+                        <td>{{ net.net_file }}</td>
+                      <td>{{ net.in_channel }}</td>
+                      <td>{{ net.in_size }}</td>
+                      <td>{{ net.description }}</td>
+                      <td><a href="{% url 'app:deleteNet' net_id=net.id%}" class="btn btn-danger"><i class="bi bi-trash"></i> Delete</a></td>
+                    </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- user records -->
+    <section class="pt-5">
+        <div class="container pt-5">
+        <div class="row row-cols-1 row-cols-md-3 g-3">
+            {% for each in page_now %}
+                <div class="card mb-3 mx-3" style="max-width: 400px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{% static 'media' %}/{{ each.input_url }}" class="rounded mx-3 pt-2" alt="..." height="100px" width="100px">
+                        <img src="{% static 'media' %}/{{ each.output_url }}" class="rounded mx-3 pb-2" alt="..." height="100px" width="100px">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">By user <strong>{{ each.upload_by.username }}</strong></h5>
+                        <p class="card-text">Using {{ each.chosen_net }}</p>
+                        <p class="card-text"><small class="text-muted">{{each.upload_time}}</small></p>
+                        <a href="{% url 'app:deleteRecord' record_id=each.id%}" class="btn btn-outline-danger">Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+        </div>
+        </div>
+    </section>
+
+
+    <!-- pagination -->
+    <nav class="pt-5" aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        {% if page_now.has_previous %}
+            <li class="page-item">
+              <a class="page-link" href="{% url 'app:admin' page=page_now.previous_page_number %}" tabindex="-1">Previous</a>
+            </li>
+        {% endif %}
+        <li class="page-item"><a class="page-link" href="">{{ page_now.number }} / {{ page_now.paginator.num_pages }}</a></li>
+        {% if page_now.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="{% url 'app:admin' page=page_now.next_page_number %}">Next</a>
+            </li>
+        {% endif %}
+      </ul>
+    </nav>
+
+    <!-- footer -->
+    <footer class="p-5 text-dark text-center">
+        <div class="container">
+            <p class="lead">Copyright &copy; HITsz ICES Lab</p>
+        </div>
+    </footer>
+
+{% endblock %}

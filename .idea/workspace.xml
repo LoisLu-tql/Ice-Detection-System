@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac23c86e-2913-4cec-9213-93d786104754" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="Django default" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="seaice: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ices" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2KGEKodXsuvG8yxs1xibjm1M5Jt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/UST-Programming/code_and_data" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GraduationDesign\ices\app\nets_lib\model" />
+      <recent name="D:\GraduationDesign\ices\app\nets_lib" />
+      <recent name="D:\GraduationDesign\ices\app\templates" />
+      <recent name="D:\GraduationDesign\ices\app\tools" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GraduationDesign\ices\app\nets_lib" />
+      <recent name="D:\GraduationDesign\ices\app\static" />
+      <recent name="D:\GraduationDesign\ices" />
+      <recent name="D:\GraduationDesign\ices\app\static\img" />
+      <recent name="D:\GraduationDesign\ices\app\nets_lib\model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ices" type="Python.DjangoServer" factoryName="Django server">
+      <module name="ices" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="ices.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac23c86e-2913-4cec-9213-93d786104754" name="Default Changelist" comment="" />
+      <created>1673592458327</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673592458327</updated>
+      <workItem from="1673592462598" duration="598000" />
+      <workItem from="1673682739072" duration="4502000" />
+      <workItem from="1673688041410" duration="5317000" />
+      <workItem from="1676788807109" duration="5023000" />
+      <workItem from="1676979449889" duration="14264000" />
+      <workItem from="1677084269405" duration="635000" />
+      <workItem from="1677258391166" duration="1223000" />
+      <workItem from="1677302638912" duration="6483000" />
+      <workItem from="1679471336291" duration="652000" />
+      <workItem from="1680077948808" duration="950000" />
+      <workItem from="1680085320585" duration="1254000" />
+      <workItem from="1681393882596" duration="4032000" />
+      <workItem from="1681537400823" duration="17081000" />
+      <workItem from="1681627843417" duration="27229000" />
+      <workItem from="1681889545123" duration="5670000" />
+      <workItem from="1682310863234" duration="39776000" />
+      <workItem from="1682513212632" duration="42663000" />
+      <workItem from="1682840887266" duration="2234000" />
+      <workItem from="1682878211701" duration="8833000" />
+      <workItem from="1683442388289" duration="87000" />
+      <workItem from="1683831173862" duration="922000" />
+      <workItem from="1684046973998" duration="18000" />
+      <workItem from="1684254888567" duration="5135000" />
+      <workItem from="1684274920037" duration="93000" />
+      <workItem from="1684306722682" duration="2052000" />
+      <workItem from="1685006709648" duration="1429000" />
+      <workItem from="1685008831589" duration="648000" />
+      <workItem from="1695274405128" duration="104000" />
+      <workItem from="1706771698175" duration="37000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="933" y="163" key="FileChooserDialogImpl" timestamp="1695274506980">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="933" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1695274506980" />
+    <state x="833" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1695274442137">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="833" y="232" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1695274442137" />
+  </component>
+</project>

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    SID-Register
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- register part -->
+    <section class="p-5">
+        <div class="container w-50 mt-5">
+            <div class="card">
+                <h1 class="mb-3">Sea Ice <span class="badge bg-secondary">Detector</span></h1>
+                <form class="row g-3" method="post" action="">
+                    {%csrf_token%}
+                    <div class="col-md-6">
+                      <label for="username" class="form-label">Username</label>
+                      <input required="required" type="text" class="form-control" id="username" name="username">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="password" class="form-label">Password</label>
+                      <input required="required" type="text" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input required="required" type="email" class="form-control" id="email" name="email">
+                      </div>
+                    <div class="col-12">
+                      <label for="institution" class="form-label">Institution</label>
+                      <input required="required" type="text" class="form-control" id="institution" name="institution" placeholder="Your School or Company">
+                    </div>
+                    <div class="col-md-2">
+                      <label for="age" class="form-label">Age</label>
+                      <input required="required" max="120" min="1" type="number" class="form-control" id="age" name="age">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select id="gender" class="form-select" name="gender">
+                          <option selected value="0">Secret</option>
+                          <option value="1">Male</option>
+                          <option value="2">Female</option>
+                          <option value="3">Trans</option>
+                          <option value="4">Asexuality</option>
+                          <option value="5">Others</option>
+                        </select>
+                      </div>
+                    <div class="col-md-6">
+                      <label for="reason" class="form-label">Why using our web</label>
+                      <select id="reason" class="form-select" name="reason">
+                        <option selected value="0">Secret</option>
+                        <option value="1">Learning</option>
+                        <option value="2">Just for fun</option>
+                        <option value="3">For business</option>
+                        <option value="4">Others</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary my-4">Register</button>
+                </form>
+                <p>Have account already? <a href="{% url 'app:login' %}">Login</a></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="p-2 text-white text-center">
+        <div class="container">
+            <p class="lead">Copyright &copy; HITsz ICES Lab</p>
+        </div>
+    </footer>
+
+{% endblock %}

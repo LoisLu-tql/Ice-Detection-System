@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    SID-Login
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- login part -->
+    <section class="p-5">
+        <div class="container w-50 mt-5">
+            <div class="card">
+                <h1 class="mb-3">Sea Ice <span class="badge bg-secondary">Detector</span></h1>
+                <form method="post" action="">
+                    {%csrf_token%}
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+                        <label for="email">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                        <label for="password">Password</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3">Login</button>
+                </form>
+                <p>Do not have account yet? <a href="{% url 'app:register' %}">Register</a></p>
+                {% if error %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      <strong>Fail!</strong> Please check your email or password again.
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endif %}
+            </div>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="p-2 text-white text-center">
+        <div class="container">
+            <p class="lead">Copyright &copy; HITsz ICES Lab</p>
+        </div>
+    </footer>
+{% endblock %}

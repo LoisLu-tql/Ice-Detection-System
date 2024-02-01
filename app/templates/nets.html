@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    SID-Nets
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- model list -->
+    <section class="pt-5">
+        <div class="container pt-5">
+            {% for net in nets_list %}
+                <div class="card mb-5 p-3">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="{% static 'img/model_pic.png' %}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ net.net_name }}</h5>
+                      <p class="card-text">{{ net.description }}</p>
+                      <p class="card-text"><small class="text-muted">
+                          Input channels: {{ net.in_channel }}<br>
+                          Input image size: {{ net.in_size }} * {{ net.in_size }}
+                      </small></p>
+                      <a type="button" class="btn btn-outline-secondary" href="{% url 'app:predict' net.id %}">Use It</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="p-5 text-dark text-center">
+        <div class="container">
+            <p class="lead">Copyright &copy; HITsz ICES Lab</p>
+        </div>
+    </footer>
+
+{% endblock %}
