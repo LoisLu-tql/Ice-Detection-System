@@ -12,3 +12,4 @@ app filter=lfs diff=lfs merge=lfs -text
 db.sqlite3 filter=lfs diff=lfs merge=lfs -text
 ices filter=lfs diff=lfs merge=lfs -text
 *.pth filter=lfs diff=lfs merge=lfs -text
+app/nets_lib/Swin_UNet.pth filter=lfs diff=lfs merge=lfs -text
